@@ -77,7 +77,7 @@ const MintCard = () => {
 					href='https://opensea.io/collection/cryptoflats-gen1'
 					target='_blank'
 				>
-					Buy NFT Room
+					BUY NFT ROOM
 				</Button>
 			</div>
 		</article>
