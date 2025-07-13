@@ -7,7 +7,7 @@ import { images } from "@/shared/lib/images";
 
 export const ThirdGradientBackground = React.memo<
     React.PropsWithChildren
->(({
+>(({ 
     children
 }) => {
     return (

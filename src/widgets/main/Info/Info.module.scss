@@ -310,16 +310,15 @@
 
     & .button {
         margin: 0 auto;
-        width: fit-content;
         margin-top: 33px;
 
         @media (max-width: 769px) {
-            min-width: 290px;
+            min-width: 210px;
         }
 
         @include media-tablet() {
             margin-top: 52px;
-            min-width: 380px;
+            min-width: 260px;
         }
     }
 }

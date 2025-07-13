@@ -24,19 +24,30 @@ export const useScrollAnimation = () => {
 		isShowed ? 'is-section-animated' : ''
 	].join(' '), [isShowed])
 
-	function onScroll() {
-		if (ref.current && isAnyElementInViewport(ref.current)) {
-			setIsShowed(true)
-		}
-	}
-
 	useEffect(() => {
-		document.body.addEventListener('scroll', onScroll)
-
-		return () => {
-			document.body.removeEventListener('scroll', onScroll)
+		// Если анимация уже была показана, выходим.
+		// Это также уберет слушатель события после того, как isShowed станет true.
+		if (isShowed) {
+			return;
 		}
-	}, []);
+
+		const handleScroll = () => {
+			if (ref.current && isAnyElementInViewport(ref.current)) {
+				setIsShowed(true);
+			}
+		};
+
+		// Проверяем один раз при монтировании, вдруг элемент уже видим
+		handleScroll();
+
+		// Вешаем слушатель на `window` - это правильный объект для скролла всей страницы
+		window.addEventListener('scroll', handleScroll, { passive: true });
+
+		// Убираем слушатель при размонтировании или когда isShowed станет true
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, [isShowed]); // Зависимость от isShowed позволяет нам убрать слушатель после анимации
 
 	return {
 		ref,

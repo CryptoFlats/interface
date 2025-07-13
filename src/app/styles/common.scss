@@ -32,8 +32,6 @@ $mainFontFamily: 'Nunito';
 
 html {
     overflow-x: hidden;
-    overflow-y: hidden;
-    height: 100dvh;
 }
 
 body {
@@ -45,8 +43,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    overflow-y: auto;
-    height: 100dvh;
     background: rgba(23, 30, 39, 1);
     color: rgba(255, 255, 255, 1);
     font-size: 14px;
@@ -58,7 +54,7 @@ code {
 }
 
 #root {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 h1,

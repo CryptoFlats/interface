@@ -14,6 +14,7 @@ import {
 } from '@/widgets/main';
 import { Header } from '@/widgets/Header'
 import { Footer } from '@/widgets/Footer'
+
 import {useLazyVideo} from "@/shared/lib/hooks/useLazyVideo";
 import { useSmoothScroll } from '@/shared/lib/hooks/useSmoothScroll';
 
