@@ -44,44 +44,28 @@ export const RaritySlider = () => {
 		<div className={styles.parent}>
 			<div className={classes.join(' ')}>
 				<div className={styles.row}>
-					{/* <button
-						className={getTabClasses(0)}
-						onClick={() => swiper?.slideTo(0)}
-					> */}
-						{/* {t('welcome_page.nft_types.golden_pass')} */}
-					{/* </button> */}
-					{/* <button
-						className={getTabClasses(1)}
-						onClick={() => swiper?.slideTo(1)}
-					> */}
-						{/* {t('welcome_page.nft_types.diamond_pass')} */}
-					{/* </button> */}
-					{/* <div className={`${styles.tab} ${styles.title}`}>
-						@ts-ignore
-						{t('welcome_page.nft_types_title')}
-					</div> */}
 					<button
-						className={getTabClasses(0)}
+						className={`${getTabClasses(0)} ${styles.standard}`}
 						onClick={() => swiper?.slideTo(0)}
 					>
-						{t('welcome_page.nft_types.standart')}
+						STANDARD FLATS
 					</button>
 				</div>
 				<div className={styles.row}>
 					<button
-						className={getTabClasses(1)}
+						className={`${getTabClasses(1)} ${styles.silver}`}
 						onClick={() => swiper?.slideTo(1)}
 					>
 						{t('welcome_page.nft_types.silver')}
 					</button>
 					<button
-						className={getTabClasses(2)}
+						className={`${getTabClasses(2)} ${styles.gold}`}
 						onClick={() => swiper?.slideTo(2)}
 					>
 						{t('welcome_page.nft_types.gold')}
 					</button>
 					<button
-						className={getTabClasses(3)}
+						className={`${getTabClasses(3)} ${styles.diamond}`}
 						onClick={() => swiper?.slideTo(3)}
 					>
 						{t('welcome_page.nft_types.diamond')}
@@ -97,12 +81,6 @@ export const RaritySlider = () => {
 					onSwiper={setSwiper}
 					onSlideChange={(e: SwiperClass) => setActiveIndex(e.activeIndex)}
 				>
-					{/* <SwiperSlide className={styles.slide}>
-						<Slide type={'goldPass'} isActive={activeIndex === 0} className='is-gold'/>
-					</SwiperSlide>
-					<SwiperSlide className={styles.slide}>
-						<Slide type={'diamondPass'} isActive={activeIndex === 1} className='is-diamond'/>
-					</SwiperSlide> */}
 					<SwiperSlide className={styles.slide}>
 						<Slide type={'standardFlats'} isActive={activeIndex === 0} className='is-standart'/>
 					</SwiperSlide>
@@ -131,16 +109,6 @@ const Background = React.memo<BackgroundProps>(({
 
 	return (
 		<div className={styles['bg-wrapper']}>
-			{/* <WebpImage
-				className={activeIndex === 0 ? styles['is-active'] : ''}
-				src={images.main.slider.backgrounds.gold}
-				alt={'background'}
-			/>
-			<WebpImage
-				className={activeIndex === 1 ? styles['is-active'] : ''}
-				src={images.main.slider.backgrounds.diamond}
-				alt={'background'}
-			/> */}
 			<WebpImage
 				className={activeIndex === 0 ? styles['is-active'] : ''}
 				src={images.main.slider.backgrounds.standart}

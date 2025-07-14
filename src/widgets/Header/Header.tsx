@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import { createPortal } from "react-dom";
 
 import { WebpImage } from "@/shared/ui/WebpImage";
@@ -16,22 +16,21 @@ export type HeaderProps = {
 
 
 export const Header: React.FC<HeaderProps> = ({ type = "main" }) => {
-  const lang = localStorage.getItem("saved-lang");
+  // const lang = localStorage.getItem("saved-lang");
 
   const [isOpen, setIsOpen] = useState(false);
-  
 
-  const logo = useMemo(() => {
-    if (type === "dapp") {
-      return images.main.header["logo-dapp"];
-    }
 
-    if (lang === "ru") {
-      return images.main.header["logo-ru"];
-    }
-    return images.main.header.logo;
-  }, [type, lang]);
+  // const logo = useMemo(() => {
+  //   if (type === "dapp") {
+  //     return images.main.header["logo-dapp"];
+  //   }
 
+  //   if (lang === "ru") {
+  //     return images.main.header["logo-ru"];
+  //   }
+  //   return images.main.header.logo;
+  // }, [type, lang]);
 
   return (
     <>
@@ -42,7 +41,9 @@ export const Header: React.FC<HeaderProps> = ({ type = "main" }) => {
           className={`${styles.container} container`}
         >
           <Link className={styles.logo} to={"/"}>
-            <WebpImage src={logo} alt={"Logo"} />
+            {/* <WebpImage src={logo} alt={"Logo"} /> */}
+            <WebpImage src={images.main.header.key} alt={"Logo"} />
+            <span>Cryptoflats</span>
           </Link>
           <div className={styles.info}>
             <div className={styles.links}>
@@ -50,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({ type = "main" }) => {
                 About
               </a>
               <a className={styles.link} href='https://opensea.io/collection/cryptoflats-gen1'
-					target='_blank'>
+                target='_blank'>
                 Buy NFT Room
               </a>
               <a className={styles.link} href="#concepts">
@@ -113,8 +114,8 @@ const Dropdown = React.memo<DropdownProps>(({ isOpen, onClose }) => {
         </a>
         <a
           className={styles["dropdown-link"]}
-         href='https://opensea.io/collection/cryptoflats-gen1'
-					target='_blank'
+          href='https://opensea.io/collection/cryptoflats-gen1'
+          target='_blank'
           rel={"noreferrer noopener"}
           onClick={onClose}
         >
@@ -146,4 +147,3 @@ const Dropdown = React.memo<DropdownProps>(({ isOpen, onClose }) => {
   );
 });
 
-  

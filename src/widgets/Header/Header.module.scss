@@ -22,6 +22,50 @@
     }
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+
+    & span {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: 1px;
+        background: linear-gradient(296.16deg, #F1E1FF 26.02%, #DAFDFF 58.94%, #FFDDF5 91.86%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: none;
+
+        @media (max-width: 769px) {
+            font-size: 20px;
+        }
+    }
+
+    & picture {
+        width: 60px !important;
+        height: 60px !important;
+        @media (max-width: 769px) {
+            width: 42px !important;
+            height: 42px !important;
+        }
+    }
+
+    & img {
+        width: 60px;
+        height: 60px;
+    
+        @media (max-width: 769px) {
+            width: 42px;
+            height: 42px;
+        }
+    }
+}
+
 .modal {
     position: absolute;
     top: 0;

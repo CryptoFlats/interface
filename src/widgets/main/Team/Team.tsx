@@ -1,6 +1,8 @@
 import styles from './Team.module.scss'
 import React, { useMemo } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
 import { useScrollAnimation } from '@/shared/lib/hooks/useScrollAnimation';
 import {InfoSection} from "@/shared/ui/InfoSection";
 import { images } from '@/shared/lib/images';
@@ -107,7 +109,13 @@ const Slider = () => {
 	return (
 		<Swiper
 			className={styles.slider}
+			modules={[Autoplay]}
 			slidesPerView={1}
+			autoplay={{
+				delay: 2000,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: true
+			}}
 		>
 			{data.map(item => (
 				<SwiperSlide key={item.index} className={styles.slide}>

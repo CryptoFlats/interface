@@ -73,11 +73,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 14px;
 
     @include media-max-mobile() {
         & + & {
-            margin-top: 14px;
+            margin-top: 24px;
         }
     }
 
@@ -107,7 +107,7 @@
     outline: none;
     border: none;
 
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
     font-weight: 700;
     cursor: pointer;
@@ -118,12 +118,32 @@
     transition: 0.3s ease;
     transition-property: color;
 
-    &.title {
-        font-size: 28px;
+    &.standard {
+        &.is-active {
+            color: #FFFFFF; /* Standard - green */
+        }
     }
 
-    &.is-active {
-        color: #FFC940;
+    &.silver {
+        &.is-active {
+            color: #CCB192; /* Silver - silver */
+        }
+    }
+
+    &.gold {
+        &.is-active {
+            color: #FFC940; /* Gold - gold */
+        }
+    }
+
+    &.diamond {
+        &.is-active {
+            color: #61C2FF; /* Diamond - diamond/blue */
+        }
+    }
+
+    &.title {
+        font-size: 28px;
     }
 
     @include media-max-mobile() {
@@ -230,7 +250,7 @@
 .card {
     border-radius: 32px;
     background: linear-gradient(315deg, rgba(12, 17, 22, 0.7) 0%, rgba(77, 78, 89, 0.7) 100%);
-    padding: 45px 130px;
+    padding: 45px 102.5px;
 
     @media (max-width: 768px) {
         padding: 35px 60px;

@@ -51,7 +51,8 @@ export const images = {
             wallet: '/images/main/header/wallet',
             x: '/images/main/header/x',
             'logo-dapp': '/images/main/header/logo-dapp',
-            avatar: '/images/main/header/avatar'
+            avatar: '/images/main/header/avatar',
+            key: '/images/main/header/key',
         },
         info: {
             game: {

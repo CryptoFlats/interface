@@ -6,6 +6,7 @@ import { resolve } from 'path'
 export default defineConfig({
   server: {
     host: 'localhost',
+    allowedHosts: ['surface-ryan-employed-mostly.trycloudflare.com']
   },
   plugins: [react()],
   resolve: {
