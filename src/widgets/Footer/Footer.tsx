@@ -9,7 +9,7 @@ export const Footer = () => {
 	return (
 		<footer className={`${styles.root} container`}>
 			<div className={styles.socialsLinksContainer}>
-				<a className={styles.social} href={'https://x.com/cflatsproject'} target={'_blank'} rel={'noreferrer noopener'}>
+				<a className={styles.social} href={'https://x.com/CryptoflatsNFT'} target={'_blank'} rel={'noreferrer noopener'}>
 					<WebpImage src={images.main.header.x} alt={'x'} />
 				</a>
 				<p className={styles.copyracy}>

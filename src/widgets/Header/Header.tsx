@@ -50,10 +50,10 @@ export const Header: React.FC<HeaderProps> = ({ type = "main" }) => {
               <a className={styles.link} href="#about">
                 About
               </a>
-              <a className={styles.link} href='https://opensea.io/collection/cryptoflats-gen1'
+              {/* <a className={styles.link} href='https://opensea.io/collection/cryptoflats-gen1'
                 target='_blank'>
                 Buy NFT Room
-              </a>
+              </a> */}
               <a className={styles.link} href="#concepts">
                 Concepts
               </a>
@@ -64,7 +64,7 @@ export const Header: React.FC<HeaderProps> = ({ type = "main" }) => {
             <div className={styles.socials}>
               <a
                 className={styles.social}
-                href={"https://x.com/cflatsproject"}
+                href={"https://x.com/CryptoflatsNFT"}
                 target={"_blank"}
                 rel={"noreferrer noopener"}
               >
@@ -112,7 +112,7 @@ const Dropdown = React.memo<DropdownProps>(({ isOpen, onClose }) => {
         <a className={styles["dropdown-link"]} href="#about" onClick={onClose}>
           About
         </a>
-        <a
+        {/* <a
           className={styles["dropdown-link"]}
           href='https://opensea.io/collection/cryptoflats-gen1'
           target='_blank'
@@ -120,7 +120,7 @@ const Dropdown = React.memo<DropdownProps>(({ isOpen, onClose }) => {
           onClick={onClose}
         >
           Buy NFT Room
-        </a>
+        </a> */}
 
         <a className={styles["dropdown-link"]} href="#concepts" onClick={onClose}>
           Concepts
@@ -133,7 +133,7 @@ const Dropdown = React.memo<DropdownProps>(({ isOpen, onClose }) => {
         <div className={styles["dropdown-socials"]}>
           <a
             className={styles.social}
-            href={"https://x.com/cflatsproject"}
+            href={"https://x.com/CryptoflatsNFT"}
             target={"_blank"}
             rel={"noreferrer noopener"}
             onClick={onClose}
