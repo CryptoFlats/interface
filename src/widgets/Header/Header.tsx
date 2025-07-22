@@ -8,18 +8,14 @@ import { images } from "@/shared/lib/images";
 import { Burger } from "./ui";
 import styles from "./Header.module.scss";
 
-
 export type HeaderProps = {
   type?: "dapp" | "main";
 };
-
-
 
 export const Header: React.FC<HeaderProps> = ({ type = "main" }) => {
   // const lang = localStorage.getItem("saved-lang");
 
   const [isOpen, setIsOpen] = useState(false);
-
 
   // const logo = useMemo(() => {
   //   if (type === "dapp") {
@@ -34,12 +30,8 @@ export const Header: React.FC<HeaderProps> = ({ type = "main" }) => {
 
   return (
     <>
-      <header
-        className={`${styles.root}`}
-      >
-        <div
-          className={`${styles.container} container`}
-        >
+      <header className={`${styles.root}`}>
+        <div className={`${styles.container} container`}>
           <Link className={styles.logo} to={"/"}>
             {/* <WebpImage src={logo} alt={"Logo"} /> */}
             <WebpImage src={images.main.header.key} alt={"Logo"} />
@@ -54,8 +46,15 @@ export const Header: React.FC<HeaderProps> = ({ type = "main" }) => {
                 target='_blank'>
                 Buy NFT Room
               </a> */}
-              <a className={styles.link} href="#concepts">
-                Concepts
+              <a
+                className={styles.link}
+                href="https://cryptoflatsnft.notion.site/"
+                target="_blank"
+              >
+                How It Works
+              </a>
+              <a className={styles.link} href="#concept">
+                Concept
               </a>
               <a className={styles.link} href="#game">
                 Game
@@ -105,7 +104,6 @@ type DropdownProps = {
 };
 
 const Dropdown = React.memo<DropdownProps>(({ isOpen, onClose }) => {
-
   return createPortal(
     <div className={`${styles.dropdown} ${isOpen ? styles["is-active"] : ""}`}>
       <div className={styles["dropdown-links"]}>
@@ -121,9 +119,21 @@ const Dropdown = React.memo<DropdownProps>(({ isOpen, onClose }) => {
         >
           Buy NFT Room
         </a> */}
-
-        <a className={styles["dropdown-link"]} href="#concepts" onClick={onClose}>
-          Concepts
+        <a
+          className={styles["dropdown-link"]}
+          href="https://cryptoflatsnft.notion.site/"
+          target="_blank"
+          rel={"noreferrer noopener"}
+          onClick={onClose}
+        >
+          How It Works
+        </a>
+        <a
+          className={styles["dropdown-link"]}
+          href="#concept"
+          onClick={onClose}
+        >
+          Concept
         </a>
         <a className={styles["dropdown-link"]} href="#game" onClick={onClose}>
           Game
@@ -146,4 +156,3 @@ const Dropdown = React.memo<DropdownProps>(({ isOpen, onClose }) => {
     document.querySelector("#root")!
   );
 });
-
